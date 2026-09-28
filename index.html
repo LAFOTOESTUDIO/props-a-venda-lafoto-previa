@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Props de estúdio e decoração à venda — L.A. Foto Estúdio</title>
+<meta name="robots" content="noindex, nofollow">
+<title>PRÉVIA · Props de estúdio e decoração à venda — L.A. Foto Estúdio</title>
 <meta name="description" content="Peças de cenário, mobiliário de estúdio e decoração de Natal, usadas em ensaios e à venda direto pelo WhatsApp.">
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -158,6 +159,32 @@ h2{font-family:Fraunces,Georgia,serif; font-size:24px; font-weight:600;
 #presets .x:hover{opacity:1}
 @media (max-width:640px){ #presets b{white-space:normal} #presets .p-txt{display:none} }
 
+/* carrossel de fotos */
+.foto img{cursor:zoom-in}
+.foto .mais{position:absolute; right:10px; bottom:10px; background:rgba(20,26,34,.78); color:#fff;
+  font-size:12px; font-weight:700; letter-spacing:.04em; padding:5px 10px; pointer-events:none}
+#galeria{position:fixed; inset:0; z-index:60; background:rgba(12,15,20,.94); display:flex;
+  align-items:center; justify-content:center; touch-action:pan-y}
+#galeria[hidden],#galeria [hidden]{display:none}
+#galeria img{max-width:min(92vw,1100px); max-height:82vh; object-fit:contain; box-shadow:0 10px 40px rgba(0,0,0,.4)}
+#galeria button{position:absolute; background:rgba(255,255,255,.12); color:#fff; border:none; cursor:pointer;
+  font-family:inherit; line-height:1}
+#galeria button:hover{background:rgba(255,255,255,.24)}
+#galeria .g-x{top:calc(14px + env(safe-area-inset-top,0px)); right:14px; font-size:15px; font-weight:700; padding:11px 16px}
+#galeria .g-ant,#galeria .g-prox{top:50%; transform:translateY(-50%); font-size:34px; width:52px; height:64px}
+#galeria .g-ant{left:12px} #galeria .g-prox{right:12px}
+#galeria .g-info{position:absolute; left:0; right:0; bottom:calc(16px + env(safe-area-inset-bottom,0px));
+  text-align:center; color:#fff; font-size:14px; padding:0 70px}
+#galeria .g-info b{display:block; font-family:Fraunces,Georgia,serif; font-size:17px; font-weight:600}
+@media (max-width:640px){ #galeria .g-ant,#galeria .g-prox{width:42px; height:54px; font-size:28px} }
+
+/* unidades restantes, vindas do banco */
+.resta{display:inline-block; margin:0 0 10px; font-size:12px; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--zap-esc); background:#E6F4EC; padding:3px 9px; align-self:flex-start}
+.item.vendido .resta{display:none}
+.combo{margin:0 0 10px; font-size:13.5px; color:var(--ink-2); background:#FBF0DA; border-left:3px solid #8A5A12; padding:6px 10px}
+.combo b{color:var(--accent)}
+
 .aviso{background:#FBF0DA; border:1px solid #8A5A12; color:#6b4610;
   padding:14px 18px; margin:22px 0 0; font-size:14.5px}
 footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
@@ -166,6 +193,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
 </head>
 <body>
 
+<div style="background:#8A5A12;color:#fff;text-align:center;font:700 13px/1.4 Karla,Arial,sans-serif;letter-spacing:.08em;padding:8px 16px;text-transform:uppercase">Prévia das mudanças — não compartilhar este link</div>
 <nav class="topo">
   <div class="in">
     <a class="logo" href="https://www.lafotoestudio.com.br/">L.A. Foto Estúdio</a>
@@ -200,7 +228,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
 
 <h2>Decoração de Natal</h2>
 <div class="grade">
-      <article class="item" id="estrela">
+      <article class="item" id="estrela" data-fotos="fotos/galeria/estrela-1.jpg fotos/galeria/estrela-2.jpg">
         <div class="foto"><img src="fotos/estrela.jpg" alt="Estrela decorativa 720 LED — 50 cm" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -237,15 +265,15 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
         </div>
       </article>
       <article class="item" id="cordao">
-        <div class="foto"><img src="fotos/cordao-3.jpg" alt="3 cordões LED 60 bolinhas globo cristal — 15 m" loading="lazy"
+        <div class="foto"><img src="fotos/cordao-3.jpg" alt="4 cordões LED 60 bolinhas globo cristal — 15 m" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
         <div class="txt">
-          <h3>3 cordões LED 60 bolinhas globo cristal — 15 m</h3>
+          <h3>4 cordões LED 60 bolinhas globo cristal — 15 m</h3>
           <p class="preco">R$ 29 <span>cada</span></p>
-          <p class="desc">Cordão de 15 metros com 60 bolinhas tipo globo de acrílico craquelado, luz branco-quente. Enche uma árvore inteira sozinho. <b>São 3 iguais, um deles ainda lacrado</b> — leve um ou os três.</p>
+          <p class="desc">Cordão de 15 metros com 60 bolinhas tipo globo de acrílico craquelado, luz branco-quente. Enche uma árvore inteira sozinho. Um deles ainda está <b>lacrado</b>.</p>
           <p class="estado"><b>Estado:</b> Testado, funcionando. Fio e bolinhas íntegros.</p>
-          <button class="btn" data-nome="3 cordões LED 60 bolinhas globo cristal — 15 m" data-preco="29"><span>Eu quero esse</span></button>
+          <button class="btn" data-nome="4 cordões LED 60 bolinhas globo cristal — 15 m" data-preco="29"><span>Eu quero esse</span></button>
         </div>
       </article>
       <article class="item" id="piscaquente">
@@ -255,21 +283,21 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
         <div class="txt">
           <h3>Pisca-pisca LED branco quente — fio verde</h3>
           <p class="preco">R$ 25 <span>cada</span></p>
-          <p class="desc">Pisca-pisca de LED em <b>cor quente</b>, com fio verde escuro que some no meio da árvore. <b>Temos 5</b> — leve quantos precisar.</p>
+          <p class="desc">Pisca-pisca de LED em <b>cor quente</b>, com fio verde escuro que some no meio da árvore. Leve quantos precisar.</p>
           <p class="estado"><b>Estado:</b> Usados na montagem do estúdio.</p>
           <button class="btn" data-nome="Pisca-pisca LED branco quente — fio verde" data-preco="25"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="fiofada">
-        <div class="foto"><img src="fotos/fiofada.jpg" alt="Fio de fada LED — fio prateado" loading="lazy"
+      <article class="item" id="fiofada" data-fotos="fotos/galeria/fiofada-1.jpg">
+        <div class="foto"><img src="fotos/fiofada.jpg" alt="Cascata de fio de fada LED — fios prateados" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
         <div class="txt">
-          <h3>Fio de fada LED — fio prateado</h3>
-          <p class="preco">R$ 19 <span>cada</span></p>
-          <p class="desc">Fio de cobre prateado fininho com microled de luz quente, o “fio de fada” que se enrola em galho, vidro e arranjo. <b>Temos 2.</b></p>
+          <h3>Cascata de fio de fada LED — fios prateados</h3>
+          <p class="preco">R$ 59 <span>cada</span></p>
+          <p class="desc">Cascata com <b>vários fios de fada</b> — fios de cobre prateado fininhos, cheios de microled de luz quente, saindo de uma única tomada. Pendurada, vira uma cortina de luz para fundo de cenário. Os fios também se enrolam em galho, vidro e arranjo.</p>
           <p class="estado"><b>Estado:</b> Usados.</p>
-          <button class="btn" data-nome="Fio de fada LED — fio prateado" data-preco="19"><span>Eu quero esse</span></button>
+          <button class="btn" data-nome="Cascata de fio de fada LED — fios prateados" data-preco="59"><span>Eu quero esse</span></button>
         </div>
       </article>
       <article class="item" id="cordaobranco">
@@ -284,7 +312,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Cordão LED de bolinhas brancas foscas" data-preco="25"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="vermelhas">
+      <article class="item" id="vermelhas" data-fotos="fotos/galeria/vermelhas-1.jpg fotos/galeria/vermelhas-2.jpg fotos/galeria/vermelhas-3.jpg">
         <div class="foto"><img src="fotos/vermelhas.jpg" alt="Kit 30 bolas de Natal vermelhas decoradas" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -320,7 +348,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Lote de enfeites de feltro e madeira" data-preco="39"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="natalmadeira">
+      <article class="item" id="natalmadeira" data-fotos="fotos/galeria/natalmadeira-1.jpg fotos/galeria/natalmadeira-2.jpg fotos/galeria/natalmadeira-3.jpg fotos/galeria/natalmadeira-4.jpg">
         <div class="foto"><img src="fotos/natal-madeira.jpg" alt="Kit NATAL de madeira com casinhas e Noel" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -332,7 +360,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Kit NATAL de madeira com casinhas e Noel" data-preco="49"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="brancas18">
+      <article class="item" id="brancas18" data-fotos="fotos/galeria/brancas18-1.jpg fotos/galeria/brancas18-2.jpg fotos/galeria/brancas18-3.jpg">
         <div class="foto"><img src="fotos/brancas18.jpg" alt="24 bolas brancas grandes de 10 cm" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -344,7 +372,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="24 bolas brancas grandes de 10 cm" data-preco="169"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="sortidas">
+      <article class="item" id="sortidas" data-fotos="fotos/galeria/sortidas-1.jpg fotos/galeria/sortidas-2.jpg">
         <div class="foto"><img src="fotos/sortidas.jpg" alt="Lote de 64 bolas brancas sortidas" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -459,7 +487,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
         <div class="txt">
           <h3>Ursinho de suéter listrado — grande</h3>
           <p class="preco">R$ 59 <span>cada</span></p>
-          <p class="desc">Urso caramelo de pelo cacheado, <b>vestindo suéter listrado vermelho e branco</b>, de 40 a 50 cm. <b>Temos 3</b> — você escolhe quantos quiser. A foto mostra os dois tamanhos juntos no sofá.</p>
+          <p class="desc">Urso caramelo de pelo cacheado, <b>vestindo suéter listrado vermelho e branco</b>, de 40 a 50 cm. Você escolhe quantos quiser. A foto mostra os dois tamanhos juntos no sofá.</p>
           <p class="estado"><b>Estado:</b> Pelúcia limpa, suéteres inteiros.</p>
           <button class="btn" data-nome="Ursinho de suéter listrado — grande" data-preco="59"><span>Eu quero esse</span></button>
         </div>
@@ -471,12 +499,12 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
         <div class="txt">
           <h3>Ursinho de suéter listrado — pequeno</h3>
           <p class="preco">R$ 35 <span>cada</span></p>
-          <p class="desc">Urso caramelo de pelo cacheado, <b>vestindo suéter listrado vermelho e branco</b>, de 21 a 30 cm. <b>Temos 2</b> — você escolhe quantos quiser. A foto mostra os dois tamanhos juntos no sofá.</p>
+          <p class="desc">Urso caramelo de pelo cacheado, <b>vestindo suéter listrado vermelho e branco</b>, de 21 a 30 cm. Você escolhe quantos quiser. A foto mostra os dois tamanhos juntos no sofá.</p>
           <p class="estado"><b>Estado:</b> Pelúcia limpa, suéteres inteiros.</p>
           <button class="btn" data-nome="Ursinho de suéter listrado — pequeno" data-preco="35"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="almofadas">
+      <article class="item" id="almofadas" data-fotos="fotos/galeria/almofadas-1.jpg">
         <div class="foto"><img src="fotos/almofadas.jpg" alt="3 capas de almofada de Natal bordadas" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -489,15 +517,27 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
         </div>
       </article>
       <article class="item" id="ursogrande">
-        <div class="foto"><img src="fotos/ursogrande.jpg" alt="Urso grande sem roupa — 50 cm" loading="lazy"
+        <div class="foto"><img src="fotos/galeria/ursogrande-1.jpg" alt="Urso marrom grande sem roupa" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
         <div class="txt">
-          <h3>Urso grande sem roupa — 50 cm</h3>
+          <h3>Urso marrom grande sem roupa</h3>
           <p class="preco">R$ 59</p>
-          <p class="desc">Urso caramelo claro de pelo encaracolado, aproximadamente 50 cm sentado, <b>sem roupa nenhuma</b>. É uma peça só, diferente dos ursinhos de suéter listrado do anúncio acima.</p>
-          <p class="estado"><b>Estado:</b> Pelúcia macia e limpa.</p>
-          <button class="btn" data-nome="Urso grande sem roupa — 50 cm" data-preco="59"><span>Eu quero esse</span></button>
+          <p class="desc">Urso caramelo de pelo encaracolado, grande, <b>sem roupa</b>. Diferente dos ursinhos de suéter listrado.</p>
+          <p class="estado"><b>Estado:</b> Pelúcia limpa.</p>
+          <button class="btn" data-nome="Urso marrom grande sem roupa" data-preco="59"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="ursobranco" data-fotos="fotos/ursogrande.jpg">
+        <div class="foto"><img src="fotos/galeria/ursobranco-1.jpg" alt="Urso branco grande sem roupa" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Urso branco grande sem roupa</h3>
+          <p class="preco">R$ 59</p>
+          <p class="desc">Urso branco de pelo encaracolado, aproximadamente 50 cm sentado, <b>sem roupa</b>.</p>
+          <p class="estado"><b>Estado:</b> Pelúcia limpa.</p>
+          <button class="btn" data-nome="Urso branco grande sem roupa" data-preco="59"><span>Eu quero esse</span></button>
         </div>
       </article>
 </div>
@@ -552,7 +592,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Monitor Dell UltraSharp 27″ — U2722D" data-preco="2100"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="reborn">
+      <article class="item" id="reborn" data-fotos="fotos/galeria/reborn-1.jpg">
         <div class="foto"><img src="fotos/reborn.jpg" alt="Bebê reborn de silicone com enxoval e certidão" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -564,19 +604,19 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Bebê reborn de silicone com enxoval e certidão" data-preco="99"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="coelho-pelucia">
-        <div class="foto"><img src="fotos/coelhomiffy.jpg" alt="Coelhinho de pelúcia branco em veludo cotelê — 25 cm" loading="lazy"
+      <article class="item" id="coelho-pelucia" data-fotos="fotos/galeria/coelho-pelucia-2.jpg fotos/coelhomiffy.jpg">
+        <div class="foto"><img src="fotos/galeria/coelho-pelucia-1.jpg" alt="Coelhinho de pelúcia branco em veludo cotelê — 25 cm" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
         <div class="txt">
           <h3>Coelhinho de pelúcia branco em veludo cotelê — 25 cm</h3>
           <p class="preco">R$ 45</p>
-          <p class="desc">Coelhinho estilo Miffy, de veludo cotelê branco, com uns 25 cm sentado. Era figurinha certa nos nossos <b>ensaios de acompanhamento</b>. Comprado fora do país, sem esperar semanas de importação. <b>A foto é do mesmo modelo, não é a nossa.</b></p>
+          <p class="desc">Coelhinho estilo Miffy, de veludo cotelê branco, com uns 25 cm sentado. Era figurinha certa nos nossos <b>ensaios de acompanhamento</b>. Comprado fora do país, sem esperar semanas de importação. A última foto é de divulgação do modelo.</p>
           <p class="estado"><b>Estado:</b> Pelúcia limpa.</p>
           <button class="btn" data-nome="Coelhinho de pelúcia branco em veludo cotelê — 25 cm" data-preco="45"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="banquinho">
+      <article class="item" id="banquinho" data-fotos="fotos/galeria/banquinho-1.jpg fotos/galeria/banquinho-2.jpg">
         <div class="foto"><img src="fotos/banquinho.jpg" alt="Banquinho newborn de madeira com encosto" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -600,7 +640,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Coelho de madeira com rodinhas — pátina branca" data-preco="59"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="bacia">
+      <article class="item" id="bacia" data-fotos="fotos/galeria/bacia-1.jpg fotos/galeria/bacia-2.jpg">
         <div class="foto"><img src="fotos/bacia.jpg" alt="Bacia branca grande — 40 cm" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -612,7 +652,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Bacia branca grande — 40 cm" data-preco="69"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="pelego">
+      <article class="item" id="pelego" data-fotos="fotos/galeria/pelego-1.jpg">
         <div class="foto"><img src="fotos/pelego.jpg" alt="Pelego sintético branco de pelo alto" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -624,14 +664,14 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Pelego sintético branco de pelo alto" data-preco="49"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="tapetes">
+      <article class="item" id="tapetes" data-fotos="fotos/galeria/tapetes-1.jpg">
         <div class="foto"><img src="fotos/tapetes.jpg" alt="3 tapetes peludos brancos — 2,00 × 1,50 m" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
         <div class="txt">
           <h3>3 tapetes peludos brancos — 2,00 × 1,50 m</h3>
           <p class="preco">R$ 59 <span>cada</span></p>
-          <p class="desc">Tapete felpudo branco de pelo alto, 2,00 × 1,50 m — grande o bastante para virar o chão inteiro do cenário em ensaio de newborn, bebê e família. <b>São 3 iguais: R$ 59 um, ou os três por R$ 149.</b></p>
+          <p class="desc">Tapete felpudo branco de pelo alto, 2,00 × 1,50 m — grande o bastante para virar o chão inteiro do cenário em ensaio de newborn, bebê e família. <b>São iguais: R$ 59 um, ou os três por R$ 149.</b></p>
           <p class="estado"><b>Estado:</b> Usados em ensaios de estúdio.</p>
           <button class="btn" data-nome="3 tapetes peludos brancos — 2,00 × 1,50 m" data-preco="59"><span>Eu quero esse</span></button>
         </div>
@@ -648,7 +688,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Cafeteira elétrica Lenoxx 2 xícaras — preta" data-preco="45"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="cortina">
+      <article class="item" id="cortina" data-fotos="fotos/galeria/cortina-1.jpg">
         <div class="foto"><img src="fotos/cortina.jpg" alt="Cortina de cristais acrílicos" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -660,19 +700,33 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Cortina de cristais acrílicos" data-preco="69"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="gotas">
-        <div class="foto"><img src="fotos/gotas-lote.jpg" alt="Lote de gotas de cristal acrílico facetadas" loading="lazy"
+      <article class="item" id="esferas" data-fotos="fotos/gotas-lote.jpg">
+        <div class="foto"><img src="fotos/esferas.jpg" alt="6 esferas de cristal facetadas" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
         <div class="txt">
-          <h3>Lote de gotas de cristal acrílico facetadas</h3>
-          <p class="preco">R$ 59 <span>o lote</span></p>
-          <p class="desc">Pingentes em acrílico facetado transparente: <b>7 gotas grandes, 3 gotas menores, 6 esferas facetadas e 1 diamante</b>. Penduram com fio de nylon. Ficam ótimos em fundo com luz recortada.</p>
+          <h3>6 esferas de cristal facetadas</h3>
+          <p class="preco">R$ 99 <span>as 6</span></p>
+          <p class="combo">Levando esferas + gotas juntas: <b>R$ 149</b></p>
+          <p class="desc">Esferas transparentes todas lapidadas em facetas. Penduradas contra a luz, espalham pontinhos de arco-íris pelo cenário.</p>
           <p class="estado"><b>Estado:</b> Transparentes, sem trincas visíveis.</p>
-          <button class="btn" data-nome="Lote de gotas de cristal acrílico facetadas" data-preco="59"><span>Eu quero esse</span></button>
+          <button class="btn" data-nome="6 esferas de cristal facetadas" data-preco="99"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="rosa">
+      <article class="item" id="gotas" data-fotos="fotos/galeria/gotas-1.jpg fotos/gotas.jpg fotos/gotas-lote.jpg">
+        <div class="foto"><img src="fotos/gotas-grandes.jpg" alt="Gotas de cristal facetadas — 7 grandes, 3 menores e 1 diamante" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Gotas de cristal facetadas — 7 grandes, 3 menores e 1 diamante</h3>
+          <p class="preco">R$ 79 <span>o lote</span></p>
+          <p class="combo">Levando esferas + gotas juntas: <b>R$ 149</b></p>
+          <p class="desc">Pingentes transparentes lapidados: <b>7 gotas grandes, 3 gotas menores e 1 diamante</b>. Penduram com fio de nylon e ficam ótimos em fundo com luz recortada.</p>
+          <p class="estado"><b>Estado:</b> Transparentes, sem trincas visíveis.</p>
+          <button class="btn" data-nome="Gotas de cristal facetadas — 7 grandes, 3 menores e 1 diamante" data-preco="79"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="rosa" data-fotos="fotos/galeria/rosa-1.jpg">
         <div class="foto"><img src="fotos/rosa.jpg" alt="7 gotas de acrílico rosa claro" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -684,7 +738,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="7 gotas de acrílico rosa claro" data-preco="15"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="cesto">
+      <article class="item" id="cesto" data-fotos="fotos/galeria/cesto-1.jpg fotos/galeria/cesto-2.jpg">
         <div class="foto"><img src="fotos/cesto.jpg" alt="Cesto redondo de madeira branca para bebê sentar" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -696,7 +750,163 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Cesto redondo de madeira branca para bebê sentar" data-preco="189"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="caminhao">
+      <article class="item" id="octogonal" data-fotos="fotos/galeria/octogonal-2.jpg fotos/galeria/octogonal-3.jpg fotos/galeria/octogonal-4.jpg">
+        <div class="foto"><img src="fotos/galeria/octogonal-1.jpg" alt="Cesto octogonal de madeira branca" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Cesto octogonal de madeira branca</h3>
+          <p class="preco">R$ 139</p>
+          <p class="desc">Cesto de madeira em oito faces, pintado de branco, com interior creme. Clássico de newborn: o bebê dorme enroladinho dentro, e serve também de vaso de cenário.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Cesto octogonal de madeira branca" data-preco="139"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="cestospalha" data-fotos="fotos/galeria/cestospalha-2.jpg">
+        <div class="foto"><img src="fotos/galeria/cestospalha-1.jpg" alt="3 cestos redondos de palha trançada" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>3 cestos redondos de palha trançada</h3>
+          <p class="preco">R$ 79 <span>os 3</span></p>
+          <p class="desc">Trio de cestos de fibra natural trançada em tamanhos diferentes — um maior e dois baixos. Compõem newborn, mesversário e cenário de piquenique.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="3 cestos redondos de palha trançada" data-preco="79"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="cestoret" data-fotos="fotos/galeria/cestoret-2.jpg fotos/galeria/cestoret-3.jpg fotos/galeria/cestoret-4.jpg">
+        <div class="foto"><img src="fotos/galeria/cestoret-1.jpg" alt="Cesto retangular de fibra natural" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Cesto retangular de fibra natural</h3>
+          <p class="preco">R$ 59</p>
+          <p class="desc">Cesto retangular de fibra trançada com faixas horizontais, firme e fundo. Serve de berço de cenário e de apoio para bebê sentado.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Cesto retangular de fibra natural" data-preco="59"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="caixoteripado" data-fotos="fotos/galeria/caixoteripado-2.jpg">
+        <div class="foto"><img src="fotos/galeria/caixoteripado-1.jpg" alt="Caixote de madeira ripado" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Caixote de madeira ripado</h3>
+          <p class="preco">R$ 59</p>
+          <p class="desc">Caixote de madeira escura com ripas espaçadas. De pé vira nicho, deitado vira cesto de cenário.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Caixote de madeira ripado" data-preco="59"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="caixotealcas" data-fotos="fotos/galeria/caixotealcas-2.jpg">
+        <div class="foto"><img src="fotos/galeria/caixotealcas-1.jpg" alt="Caixote de madeira com alças" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Caixote de madeira com alças</h3>
+          <p class="preco">R$ 59</p>
+          <p class="desc">Caixote de madeira maciça tom mel, com alças vazadas nas laterais. Rústico e firme.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Caixote de madeira com alças" data-preco="59"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="almofadasbrancas" data-fotos="fotos/galeria/almofadasbrancas-2.jpg fotos/galeria/almofadasbrancas-3.jpg fotos/galeria/almofadasbrancas-4.jpg">
+        <div class="foto"><img src="fotos/galeria/almofadasbrancas-1.jpg" alt="4 capas de almofada brancas — sem enchimento" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>4 capas de almofada brancas — sem enchimento</h3>
+          <p class="preco">R$ 179 <span>as 4</span></p>
+          <p class="desc"><b>Vendemos só as capas, sem o enchimento.</b> São quatro, em branco e off-white, com texturas diferentes: lisa retangular, matelassê em losangos e tricô quadriculado — tecidos encorpados, de acabamento caprichado. Compõem sofá, cama e chão de cenário.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="4 capas de almofada brancas — sem enchimento" data-preco="179"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="amamentacao">
+        <div class="foto"><img src="fotos/galeria/amamentacao-1.jpg" alt="Almofada de amamentação branca" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Almofada de amamentação branca</h3>
+          <p class="preco">R$ 49</p>
+          <p class="desc">Almofada em U com capa branca de tecido texturizado e barra de tricô, com zíper para tirar a capa. Serve para amamentar e para apoiar o bebê no ensaio.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Almofada de amamentação branca" data-preco="49"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="blocosidade" data-fotos="fotos/galeria/blocosidade-2.jpg fotos/galeria/blocosidade-3.jpg fotos/galeria/blocosidade-4.jpg">
+        <div class="foto"><img src="fotos/galeria/blocosidade-1.jpg" alt="Blocos de idade em madeira — week, months, year" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Blocos de idade em madeira — week, months, year</h3>
+          <p class="preco">R$ 39 <span>o kit</span></p>
+          <p class="desc">Blocos de madeira gravados com números e as palavras <b>week, months e year</b>. Marcam a idade na foto de acompanhamento e mesversário.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Blocos de idade em madeira — week, months, year" data-preco="39"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="bolomadeira" data-fotos="fotos/galeria/bolomadeira-2.jpg">
+        <div class="foto"><img src="fotos/galeria/bolomadeira-1.jpg" alt="Bolo de aniversário de madeira com velinhas" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Bolo de aniversário de madeira com velinhas</h3>
+          <p class="preco">R$ 45</p>
+          <p class="desc">Bolo de brinquedo em madeira, com fatias que se encaixam, velinhas e faquinha de cortar. Perfeito para mesversário e smash sem sujeira.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Bolo de aniversário de madeira com velinhas" data-preco="45"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="ovinhos" data-fotos="fotos/galeria/ovinhos-2.jpg">
+        <div class="foto"><img src="fotos/galeria/ovinhos-1.jpg" alt="8 ovinhos de madeira" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>8 ovinhos de madeira</h3>
+          <p class="preco">R$ 29 <span>o lote</span></p>
+          <p class="desc">Ovinhos de madeira natural torneada. Compõem cenário de Páscoa e de ninho.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="8 ovinhos de madeira" data-preco="29"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="brinquedos" data-fotos="fotos/galeria/brinquedos-2.jpg fotos/galeria/brinquedos-3.jpg fotos/galeria/brinquedos-4.jpg fotos/galeria/brinquedos-5.jpg fotos/galeria/brinquedos-6.jpg fotos/galeria/brinquedos-7.jpg fotos/galeria/brinquedos-8.jpg">
+        <div class="foto"><img src="fotos/galeria/brinquedos-1.jpg" alt="Kit de brinquedos e mordedores de madeira" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Kit de brinquedos e mordedores de madeira</h3>
+          <p class="preco">R$ 99 <span>o kit</span></p>
+          <p class="desc">Brinquedos de madeira natural no estilo montessori: <b>ônibus com 3 bonequinhos, mordedor de argola com contas, mordedor de coelho, chocalho de nuvem, maraca, varinha de estrela e mordedor de argolas</b>. Dão detalhe delicado ao ensaio de bebê.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Kit de brinquedos e mordedores de madeira" data-preco="99"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="labirinto" data-fotos="fotos/galeria/labirinto-2.jpg">
+        <div class="foto"><img src="fotos/galeria/labirinto-1.jpg" alt="Labirinto de contas bege" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Labirinto de contas bege</h3>
+          <p class="preco">R$ 35</p>
+          <p class="desc">Brinquedo de arame com argolas de madeira que correm pelo caminho, base com ventosa, em bege neutro.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Labirinto de contas bege" data-preco="35"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="cadeiraazul" data-fotos="fotos/galeria/cadeiraazul-2.jpg fotos/galeria/cadeiraazul-3.jpg">
+        <div class="foto"><img src="fotos/galeria/cadeiraazul-1.jpg" alt="Cadeira azul estilo Eames" loading="lazy"
+             onload="this.closest('.foto').classList.remove('vazio')"
+             onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
+        <div class="txt">
+          <h3>Cadeira azul estilo Eames</h3>
+          <p class="preco">R$ 129</p>
+          <p class="desc">Cadeira com assento de polipropileno azul-claro e pés de madeira com travas de metal pretas, o modelo Eames. Fica bonita em retrato e ensaio infantil.</p>
+          <p class="estado"><b>Estado:</b> Usado em ensaios do estúdio.</p>
+          <button class="btn" data-nome="Cadeira azul estilo Eames" data-preco="129"><span>Eu quero esse</span></button>
+        </div>
+      </article>
+      <article class="item" id="caminhao" data-fotos="fotos/galeria/caminhao-1.jpg fotos/galeria/caminhao-2.jpg fotos/galeria/caminhao-3.jpg fotos/galeria/caminhao-4.jpg">
         <div class="foto"><img src="fotos/caminhao.jpg" alt="Caminhão de madeira rústica — tamanho grande" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -720,7 +930,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Cadeira infantil de madeira branca com mesinha" data-preco="179"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="banqueta">
+      <article class="item" id="banqueta" data-fotos="fotos/galeria/banqueta-1.jpg fotos/galeria/banqueta-2.jpg">
         <div class="foto"><img src="fotos/banqueta.jpg" alt="Banqueta rústica de madeira maciça" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -744,7 +954,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Mesa still 60 × 100 cm para foto de produto" data-preco="249"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="cubos">
+      <article class="item" id="cubos" data-fotos="fotos/galeria/cubos-1.jpg fotos/galeria/cubos-2.jpg fotos/galeria/cubos-3.jpg">
         <div class="foto"><img src="fotos/cubos.jpg" alt="Kit 3 cubos de MDF branco" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -756,7 +966,7 @@ footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--edge);
           <button class="btn" data-nome="Kit 3 cubos de MDF branco" data-preco="329"><span>Eu quero esse</span></button>
         </div>
       </article>
-      <article class="item" id="orquideacascata">
+      <article class="item" id="orquideacascata" data-fotos="fotos/galeria/orquideacascata-1.jpg fotos/galeria/orquideacascata-2.jpg fotos/galeria/orquideacascata-3.jpg">
         <div class="foto"><img src="fotos/orquideacascata.jpg" alt="Lote de hastes de orquídea artificial" loading="lazy"
              onload="this.closest('.foto').classList.remove('vazio')"
              onerror="this.closest('.foto').classList.add('vazio')"><span class="sem">foto em breve<br>pergunte pelo WhatsApp</span><span class="selo">Vendido</span><span class="selo-c">Quantidade a confirmar</span></div>
@@ -817,9 +1027,9 @@ Item marcado como <b>Vendido</b> já saiu.<br>
       n === 1 ? "1 peça escolhida" : n + " peças escolhidas";
     document.getElementById("bTotal").textContent = "Total aproximado: " + real(tot);
 
-    var linhas = esc.map(function(i){ return "• " + i.nome + " — " + (i.txt || real(i.preco)); }).join("\n");
-    var msg = "Oi! Vi o catálogo de props no site e quero:\n\n" + linhas +
-              "\n\nTotal aproximado: " + real(tot) + "\n\nAinda estão disponíveis?";
+    var linhas = esc.map(function(i){ return "• " + i.nome; }).join("\n");
+    var msg = "Oi! Vi o catálogo de props no site e tenho interesse em:\n\n" + linhas +
+              "\n\nAinda estão disponíveis?";
     var z = document.getElementById("bZap");
     if (ok) z.href = "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
   }
@@ -861,6 +1071,84 @@ Item marcado como <b>Vendido</b> já saiu.<br>
   document.getElementById("fechapresets").addEventListener("click", function(){
     pill.remove(); pill = null;
   });
+})();
+</script>
+<div id="galeria" hidden role="dialog" aria-modal="true" aria-label="Fotos do item">
+  <img id="gImg" alt="">
+  <button class="g-x" id="gFecha" aria-label="Fechar">✕ Fechar</button>
+  <button class="g-ant" id="gAnt" aria-label="Foto anterior">‹</button>
+  <button class="g-prox" id="gProx" aria-label="Próxima foto">›</button>
+  <div class="g-info"><b id="gNome"></b><span id="gCont"></span></div>
+</div>
+
+<script>
+(function(){
+  var gal = document.getElementById("galeria"), img = document.getElementById("gImg"),
+      lista = [], pos = 0, nome = "";
+
+  function mostra(){
+    img.src = lista[pos]; img.alt = nome;
+    document.getElementById("gNome").textContent = nome;
+    document.getElementById("gCont").textContent = lista.length > 1 ? (pos + 1) + " de " + lista.length : "";
+    document.getElementById("gAnt").hidden = document.getElementById("gProx").hidden = lista.length < 2;
+  }
+  function anda(d){ pos = (pos + d + lista.length) % lista.length; mostra(); }
+  function fecha(){ gal.hidden = true; document.body.style.overflow = ""; }
+
+  document.querySelectorAll(".item").forEach(function(it){
+    var capa = it.querySelector(".foto img"); if (!capa) return;
+    var fotos = [capa.getAttribute("src")].concat((it.dataset.fotos || "").split(" ").filter(Boolean));
+    if (fotos.length > 1) {
+      var t = document.createElement("span"); t.className = "mais";
+      t.textContent = "📷 " + fotos.length + " fotos";
+      it.querySelector(".foto").appendChild(t);
+    }
+    capa.addEventListener("click", function(){
+      if (capa.closest(".foto").classList.contains("vazio")) return;
+      lista = fotos; pos = 0; nome = it.querySelector("h3").textContent;
+      mostra(); gal.hidden = false; document.body.style.overflow = "hidden";
+    });
+  });
+
+  document.getElementById("gFecha").addEventListener("click", fecha);
+  document.getElementById("gAnt").addEventListener("click", function(e){ e.stopPropagation(); anda(-1); });
+  document.getElementById("gProx").addEventListener("click", function(e){ e.stopPropagation(); anda(1); });
+  gal.addEventListener("click", function(e){ if (e.target === gal) fecha(); });
+  document.addEventListener("keydown", function(e){
+    if (gal.hidden) return;
+    if (e.key === "Escape") fecha();
+    if (e.key === "ArrowLeft") anda(-1);
+    if (e.key === "ArrowRight") anda(1);
+  });
+  var x0 = null;
+  gal.addEventListener("touchstart", function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  gal.addEventListener("touchend", function(e){
+    if (x0 === null || lista.length < 2) return;
+    var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) anda(dx < 0 ? 1 : -1);
+  });
+})();
+</script>
+<script>
+(function(){
+  // mostra o que já foi vendido e quantas unidades restam, direto do banco
+  var API = "https://br-patient-feather-b7ckwx8j-props.compute.c-13.us-east-1.aws.neon.tech";
+  function aplica(itens){
+    itens.forEach(function(i){
+      var art = document.getElementById(i.id); if (!art) return;
+      var n = Number(i.restam);
+      art.classList.toggle("vendido", n <= 0);
+      var tag = art.querySelector(".resta");
+      if (n > 1) {
+        if (!tag) { tag = document.createElement("span"); tag.className = "resta";
+          art.querySelector(".preco").after(tag); }
+        tag.textContent = n + " disponíveis";
+      } else if (tag) tag.remove();
+      if (n <= 0) { var b = art.querySelector(".btn.on"); if (b) b.click(); }
+    });
+  }
+  fetch(API + "/estado").then(function(r){ return r.json(); })
+    .then(function(d){ if (d.itens) aplica(d.itens); }).catch(function(){});
 })();
 </script>
 </body>
